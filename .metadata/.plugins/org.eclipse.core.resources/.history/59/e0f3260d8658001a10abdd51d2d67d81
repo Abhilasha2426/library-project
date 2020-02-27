@@ -1,0 +1,47 @@
+package com.capgemini.librarymanagement.controller;
+
+import java.util.Scanner;
+
+import javax.swing.plaf.synth.SynthSeparatorUI;
+
+import com.capgemini.librarymanagement.validation.LibraryManagementValidation;
+
+public class LibraryMainPage {
+	public static void main(String[] args) {
+		System.out.println("LIBRARY MANAGEMENT SYSTEM");
+		System.out.println("---------------------------");
+		System.out.println("Enter Your Choice");
+		System.out.println("---------------------------");
+		System.out.println("1.Admin");
+		System.out.println("2.User");
+		System.out.println("3.About");
+
+		Scanner scanner = new Scanner(System.in);
+		String s = scanner.next();
+		if (LibraryManagementValidation.isNumber(s)) {
+			Integer i = Integer.parseInt(s);
+			switch (i) {
+
+			case 1:
+				LibraryManagementController.admin();
+				break;
+
+			case 2:
+				LibraryManagementController.user();
+				break;
+				
+			case 3:
+				LibraryManagementController.about();
+				
+
+			default:
+				System.out.println("Enter valid number");
+
+			}
+
+		} else {
+			System.out.println("Give correct number");
+		}
+	}
+
+}

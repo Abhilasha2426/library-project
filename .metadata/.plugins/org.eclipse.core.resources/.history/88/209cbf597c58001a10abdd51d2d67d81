@@ -1,0 +1,6 @@
+package com.capgemini.librarymanagement.dao;
+
+public interface UserDao {
+	boolean userLogin(String usrName, String pwsd);
+
+}

@@ -1,0 +1,23 @@
+package com.capgemini.librarymanagement.dao;
+
+public class UserDaoImpl implements UserDao{
+
+	@Override
+	public boolean userLogin(String usrName, String pwsd) {
+		try {
+			String adminName="sangeetha2426";
+			String adminPassword="sangeetha2426";
+			if((adminName.equals(usrName)) && (adminPassword.equals(pwsd))) {
+				return true;
+			}else {
+				return false;
+			}
+		}catch(Exception e) {
+			System.out.println("Username or Password is incorrect");
+			
+		}
+		
+		return false;
+	}
+
+}

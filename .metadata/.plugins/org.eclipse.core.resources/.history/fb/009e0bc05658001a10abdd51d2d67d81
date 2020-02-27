@@ -1,0 +1,9 @@
+package snippet;
+
+public class Snippet {
+	private String usrName;
+		private Integer usrAge;
+		private String usrPassword;
+		private long usrPhone;
+}
+

@@ -1,0 +1,6 @@
+package com.capgemini.librarymanagement.service;
+
+public interface BookInfoTransactionService {
+	boolean replaceBook(int repId);
+
+}

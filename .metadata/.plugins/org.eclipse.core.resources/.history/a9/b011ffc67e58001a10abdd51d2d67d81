@@ -1,0 +1,16 @@
+package com.capgemini.librarymanagement.service;
+
+import com.capgemini.librarymanagement.dao.LibraryBookDao;
+import com.capgemini.librarymanagement.dao.UserDao;
+
+public class UserServiceImpl implements UserService {
+
+	private UserDao dao;
+	@Override
+	public boolean userLogin(String name, String pwd) {
+		
+		return dao.userLogin(name, pwd);
+	}
+	
+
+}

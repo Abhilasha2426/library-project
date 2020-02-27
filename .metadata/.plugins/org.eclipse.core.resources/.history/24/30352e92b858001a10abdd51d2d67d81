@@ -1,0 +1,14 @@
+package com.capgemini.library_management.dao;
+
+public interface LibraryBookDao {
+
+	boolean login();
+	boolean addBook(int id);
+	boolean addUser(int id);
+	boolean deleteBook(int id);
+	boolean replaceBook(int id);
+	boolean deleteUser(int id);
+	
+	
+
+}

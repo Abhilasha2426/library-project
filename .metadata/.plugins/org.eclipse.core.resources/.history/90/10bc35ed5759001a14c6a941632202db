@@ -1,0 +1,11 @@
+package com.capgemini.librarymanagement.service;
+
+public class BookInfoTransactionServiceImpl implements BookInfoTransactionService{
+
+	@Override
+	public boolean replaceBook(int repId) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	 
+}

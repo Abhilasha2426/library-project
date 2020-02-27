@@ -1,0 +1,13 @@
+package com.capgemini.library_management.service;
+
+import com.capgemini.library_management.dao.LibraryBookDao;
+
+public class LibraryBookServiceImpl implements LibraryBookService {
+
+	private LibraryBookDao dao;
+
+	/*public boolean login() {
+		return ((LibraryBookServiceImpl) dao).login();
+	}
+*/
+}

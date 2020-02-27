@@ -1,0 +1,10 @@
+package com.capgemini.library_management.dao;
+
+public interface LibraryBookDao {
+
+	boolean login();
+	
+	
+	
+
+}

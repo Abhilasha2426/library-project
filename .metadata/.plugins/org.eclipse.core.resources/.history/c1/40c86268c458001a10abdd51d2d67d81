@@ -1,0 +1,79 @@
+package com.capgemini.library_management.controller;
+
+import java.util.LinkedList;
+import java.util.Scanner;
+
+import com.capgemini.library_management.beans.BookInfo;
+import com.capgemini.library_management.beans.UserInfoBean;
+import com.capgemini.library_management.dao.LibraryBookDao;
+import com.capgemini.library_management.dao.LibraryBookDaoImpl;
+
+public class LibraryMainPage {
+	@SuppressWarnings({ "resource", "rawtypes", "unchecked" })
+	public static void main(String[] args) {
+
+		LibraryBookDao libraryBookDao = new LibraryBookDaoImpl();
+		Scanner sc = new Scanner(System.in);
+		UserInfoBean userInfoBean = null;
+		BookInfo bookInfo = null;
+
+		System.out.println("LIBRARY MANAGEMENT SYSTEM");
+		System.out.println("---------------------------");
+
+		boolean flag = true;
+		while (flag == true) {
+			System.out.println("<----login---->");
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("Enter UserName \n");
+			String userName = scanner.next();
+			System.out.println("Enter Password \n");
+			String password = scanner.next();
+
+			if (userName.equals("Admin") && password.equals("admin@123")) {
+				LibraryManagementController.admin();
+			} else if (userName.equals("User") && password.equals("user@123")) {
+				LibraryManagementController.user();
+			} else {
+				System.out.println("Please enter correct username and password");
+			}
+			Scanner scanner1 = new Scanner(System.in);
+			System.out.println("Enter your choice");
+			int  choice = scanner1.nextInt();
+
+			if(choice==1) {
+				System.out.println("1.Add Book");
+				System.out.println("2.Add User");
+				System.out.println("3.Delete Book");
+				System.out.println("4.Replace Book");
+				System.out.println("5.Delete User");
+				int ch = sc.nextInt();
+				switch (ch) {
+				case 1:
+					System.out.println("Enter book name: ");
+					String bookName = sc.next();
+					System.out.println("Enter no of book");
+					
+					LinkedList ll = new LinkedList();
+					
+					
+					bookInfo = new BookInfo();
+					bookInfo.setBookName(bookName);
+					System.out.println("added");
+					
+//					if(LibraryBookDao.addBook(bookInfo,ll)) {
+//						System.out.println("Added");
+//					}
+					break;
+
+
+		}
+			}
+		}
+	}
+}
+
+	
+
+	
+	
+

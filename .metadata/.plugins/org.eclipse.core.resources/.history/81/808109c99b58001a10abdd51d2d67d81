@@ -1,0 +1,62 @@
+package com.capgemini.librarymanagement.controller;
+
+import java.util.Scanner;
+
+
+
+import com.capgemini.librarymanagement.validation.LibraryManagementValidation;
+
+public class LibraryMainPage {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("LIBRARY MANAGEMENT SYSTEM");
+		System.out.println("---------------------------");
+		System.out.println("Enter Your Choice");
+		System.out.println("---------------------------");
+		System.out.println("<----login---->");
+		System.out.println("Enter UserName");
+		String userName = scanner.next();
+		System.out.println("Enter Password");
+		String password = scanner.next();
+
+		if (userName.equals("") && password.equals("")) {
+			
+		} else if (userName.equals("") && password.equals("")){
+
+		}else {
+			
+		}
+		
+		System.out.println("1.Admin");
+		System.out.println("2.User");
+		System.out.println("3.About");
+		
+		String password = scanner.next();
+		if (LibraryManagementValidation.isNumber(s)) {
+			Integer i = Integer.parseInt(s);
+			switch (i) {
+
+			case 1:
+				LibraryManagementController.admin();
+				break;
+
+			case 2:
+				LibraryManagementController.user();
+				break;
+				
+			/*case 3:
+				LibraryManagementController.about();
+				*/
+
+			default:
+				System.out.println("Enter valid number");
+
+			}
+
+		} else {
+			System.out.println("Give correct number");
+		}
+	}
+
+}

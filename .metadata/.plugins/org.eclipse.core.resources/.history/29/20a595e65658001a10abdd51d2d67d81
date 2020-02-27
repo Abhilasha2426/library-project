@@ -1,0 +1,7 @@
+package com.capgemini.librarymanagement.entity;
+
+public class UserInfoBean {
+	private String usrName;
+	
+
+}

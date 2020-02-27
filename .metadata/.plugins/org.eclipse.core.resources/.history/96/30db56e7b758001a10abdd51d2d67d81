@@ -1,0 +1,36 @@
+package com.capgemini.library_management.dao;
+
+import java.util.Scanner;
+
+import com.capgemini.library_management.controller.LibraryManagementController;
+
+public class LibraryBookDaoImpl implements LibraryBookDao{
+	
+
+	public boolean login() {
+		
+		boolean flag = true;
+		while (flag == true) {
+			System.out.println("<----login---->");
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("Enter UserName \n");
+			String userName = scanner.next();
+			System.out.println("Enter Password \n");
+			String password = scanner.next();
+
+			if (userName.equals("Admin") && password.equals("admin@123")) {
+				LibraryManagementController.admin();
+			} else if (userName.equals("User") && password.equals("user@123")) {
+				LibraryManagementController.user();
+			} else {
+				System.out.println("Please enter correct username and password");
+			}
+			
+
+		}
+		return false;
+	}
+
+	
+
+}

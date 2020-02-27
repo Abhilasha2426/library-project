@@ -1,0 +1,96 @@
+package com.capgemini.librarymanagement.controller;
+
+import java.util.LinkedList;
+import java.util.Scanner;
+
+import com.capgemini.librarymanagement.bean.BookInfo;
+import com.capgemini.librarymanagement.bean.LibrarianInfoBean;
+import com.capgemini.librarymanagement.dao.LibraryBookDao;
+import com.capgemini.librarymanagement.dao.LibraryBookDaoImpl;
+
+import com.capgemini.librarymanagement.factory.LibraryManagementBookFactory;
+import com.capgemini.librarymanagement.service.LibraryBookService;
+
+public class LibraryManagementController {
+
+  LibraryBookService lbs = LibraryManagementBookFactory.objLibraryService();
+
+	LibraryBookDao libraryBookDao = new LibraryBookDaoImpl();
+	Scanner sc = new Scanner(System.in);
+	
+
+	 BookInfo bookInfo = null;
+
+	public void admin() {
+
+		System.out.println(" Admin Successfull login");
+		System.out.println("Enter your choice");
+		System.out.println("1.Add Book");
+		System.out.println("2.Add User");
+		System.out.println("3.Replace Book");
+		System.out.println("4.Delete Book");
+		System.out.println("5.Delete User");
+		Scanner scanner = new Scanner(System.in);
+		int choice = scanner.nextInt();
+
+		while (true) {
+			if (choice == 1) {
+
+//				int ch = scanner.nextInt();
+				switch (choice) {
+				case 1:
+					System.out.println("Enter book id: ");
+					int bookId = scanner.nextInt();
+					System.out.println("Enter name of book");
+					String bookName = scanner.next();
+					System.out.println("Enter author name");
+					String bookAuth = scanner.next();
+					System.out.println("Enter Category");
+					String category = scanner.next();
+					System.out.println("Enter no of books");
+					int bookNum = scanner.nextInt();
+					System.out.println("Enter publisher name");
+					String pubName = scanner.next();
+					System.out.println(" Enter date");
+					String date = scanner.next();
+					System.out.println("Enter status");
+					String status = scanner.next();
+					LinkedList ll = new LinkedList();
+					bookInfo = new BookInfo();
+					bookInfo.setBookId(bookId);
+					bookInfo.setBookName(bookName);
+					bookInfo.setBookAuthor(bookAuth);
+					bookInfo.setCategory(category);
+					bookInfo.setNoOfBooks(bookNum);
+					bookInfo.setPublisher(pubName);
+					bookInfo.setDateAdded(date);
+					bookInfo.setStatus(status);
+					if (libraryBookDao.addBook(bookInfo, ll)) {
+						System.out.println("Books added successfully with "+ bookNum +"copy");
+					}
+					break;
+				case 2:
+					System.out.println("Enter Book Id to Delete");
+					int id = scanner.nextInt();
+					if(libraryBookDao.deleteBook(id)) {
+
+						System.out.println("Deleted successfully ");
+					}
+					else {
+						System.out.println("Id Not found ");
+						
+					}
+
+					break;
+
+				}
+			}
+		}
+
+	}
+
+	public static void user() {
+		System.out.println("User login successfully");
+	}
+
+}

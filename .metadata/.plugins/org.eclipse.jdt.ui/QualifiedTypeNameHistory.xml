@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.TreeMap"/>
+<fullyQualifiedTypeName name="com.capgemini.librarymanagement.db.DbUser"/>
+<fullyQualifiedTypeName name="com.capgemini.librarymanagement.service.LibraryBookServiceImpl"/>
+<fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="com.capgemini.librarymanagement.service.LibraryBookService"/>
+<fullyQualifiedTypeName name="com.capgemini.librarymanagement.factory.LibraryManagementBookFactory"/>
+<fullyQualifiedTypeName name="com.capgemini.librarymanagement.dao.LibraryBookDaoImpl"/>
+<fullyQualifiedTypeName name="com.capgemini.librarymanagement.validation.LibraryManagementValidation"/>
+<fullyQualifiedTypeName name="com.capgemini.librarymanagement.service.UserService"/>
+<fullyQualifiedTypeName name="com.capgemini.librarymanagement.dao.UserDaoImpl"/>
+<fullyQualifiedTypeName name="com.capgemini.librarymanagement.bean.LibrarianInfoBean"/>
+<fullyQualifiedTypeName name="com.capgemini.librarymanagement.dao.UserDao"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthSeparatorUI"/>
+<fullyQualifiedTypeName name="com.capgemini.library_management.db.DbStore"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="com.capgemini.library_management.dao.LibraryBookDaoImpl"/>
+<fullyQualifiedTypeName name="com.capgemini.library_management.beans.UserInfoBean"/>
+<fullyQualifiedTypeName name="com.capgemini.library_management.beans.BookInfo"/>
+<fullyQualifiedTypeName name="com.capgemini.library_management.dao.LibraryBookDao"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="com.capgemini.librarymanagement.db.DbStore"/>
+<fullyQualifiedTypeName name="com.capgemini.librarymanagement.bean.BookInfo"/>
+<fullyQualifiedTypeName name="com.capgemini.librarymanagement.controller.LibraryManagementController"/>
+<fullyQualifiedTypeName name="com.capgemini.librarymanagement.dao.LibraryBookDao"/>
+<fullyQualifiedTypeName name="com.capgemini.librarymanagement.bean.UserInfoBean"/>
+</qualifiedTypeNameHistroy>

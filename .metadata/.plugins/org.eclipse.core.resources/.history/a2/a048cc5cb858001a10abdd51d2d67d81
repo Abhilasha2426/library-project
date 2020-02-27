@@ -1,0 +1,92 @@
+package com.capgemini.library_management.dao;
+
+import java.util.LinkedList;
+import java.util.Scanner;
+
+import com.capgemini.library_management.beans.BookInfo;
+import com.capgemini.library_management.controller.LibraryManagementController;
+
+public class LibraryBookDaoImpl implements LibraryBookDao{
+	
+
+	public boolean login() {
+		
+		boolean flag = true;
+		while (flag == true) {
+			System.out.println("<----login---->");
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("Enter UserName \n");
+			String userName = scanner.next();
+			System.out.println("Enter Password \n");
+			String password = scanner.next();
+
+			if (userName.equals("Admin") && password.equals("admin@123")) {
+				LibraryManagementController.admin();
+			} else if (userName.equals("User") && password.equals("user@123")) {
+				LibraryManagementController.user();
+			} else {
+				System.out.println("Please enter correct username and password");
+			}
+			
+
+		}
+		return false;
+	}
+	
+	/*
+	public boolean addMedicine(MedicineInfoBean medicineInfoBean, LinkedList li) {
+
+		boolean isAdded = false;
+		LinkedList ll = null;
+		if (medicineInfoBean != null) {
+			ll = new LinkedList();
+			ll.add(medicineInfoBean.getShName());
+			for (int i = 0; i < li.size(); i++) {
+				ll.add(li.get(i));
+			}
+			//ll.add(medicineInfoBean.getPrice());
+			//ll.add(medicineInfoBean.getTabName());
+
+			if (DbStore.medicalDb(ll)) {
+				System.out.println("Medicine Id "+DbStore.temp1); 
+				//System.out.println(" Added");
+				isAdded = true;
+			}
+
+		}
+
+		return isAdded;
+*/
+	public boolean addBook(BookInfo bookInfo, LinkedList li) {
+		boolean isAdded =false;
+		LinkedList ll=null;
+		if(bookInfo != null) {
+			ll=new LinkedList();
+			ll.add(bookInfo.getBookName());
+			for(int i=0; i< li.size();i++) {
+				ll.add(li.get(i));
+			}
+			if()
+		}
+		return false;
+	}
+
+	public boolean addUser(int id) {
+		return false;
+	}
+
+	public boolean deleteBook(int id) {
+		return false;
+	}
+
+	public boolean replaceBook(int id) {
+		return false;
+	}
+
+	public boolean deleteUser(int id) {
+		return false;
+	}
+
+	
+
+}

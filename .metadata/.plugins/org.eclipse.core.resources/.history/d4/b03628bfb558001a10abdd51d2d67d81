@@ -1,0 +1,24 @@
+package com.capgemini.library_management.controller;
+
+import java.util.Scanner;
+
+import com.capgemini.library_management.beans.LibrarianInfoBean;
+import com.capgemini.library_management.dao.LibraryBookDao;
+import com.capgemini.library_management.dao.LibraryBookDaoImpl;
+import com.capgemini.library_management.factory.LibraryManagementBookFactory;
+import com.capgemini.library_management.service.LibraryBookService;
+
+public class LibraryManagementController {
+
+	static LibraryBookService lbs = LibraryManagementBookFactory.objLibraryService();
+
+	public static void admin() {
+		System.out.println(" Admin Successfull login");
+		
+	}
+
+	public static void user() {
+		System.out.println("User Successfull login");
+	}
+
+}

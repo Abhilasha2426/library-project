@@ -1,0 +1,24 @@
+package com.capgemini.library_management.service;
+
+import com.capgemini.library_management.dao.LibraryBookDao;
+
+public class LibraryBookServiceImpl implements LibraryBookService {
+
+	private LibraryBookDao dao;
+
+	/*@Override
+	public boolean signUp(UserInfoBean userInfoBean) {
+		return dao.signUp(userInfoBean);
+	}
+
+	@Override
+	public boolean userAuthenticate(int id, String password) {
+		return dao.userAuthenticate(id, password);
+	}*/
+
+	@Override
+	public boolean login(String name, String pwd) {
+		return dao.login(name, pwd);
+	}
+
+}

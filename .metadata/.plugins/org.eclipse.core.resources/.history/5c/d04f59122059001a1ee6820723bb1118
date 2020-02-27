@@ -1,0 +1,24 @@
+package com.capgemini.library_management.controller;
+
+
+import java.util.Scanner;
+
+import com.capgemini.library_management.factory.LibraryManagementBookFactory;
+import com.capgemini.library_management.service.LibraryBookService;
+
+public class LibraryManagementController {
+
+	static LibraryBookService lbs = LibraryManagementBookFactory.objLibraryService();
+
+	public static void admin() {
+		System.out.println(" Admin Successfull login");
+		Scanner scanner = new Scanner(System.in);
+		
+		
+	}
+
+	public static void user() {
+		System.out.println("User Successfull login");
+	}
+
+}

@@ -1,0 +1,1 @@
+INDEX VERSION 1.4+C:\Users\win 10\Desktop\library project\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes

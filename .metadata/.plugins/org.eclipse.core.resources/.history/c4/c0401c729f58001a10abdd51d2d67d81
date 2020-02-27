@@ -1,0 +1,27 @@
+package com.capgemini.librarymanagement.controller;
+
+import java.util.Scanner;
+
+import com.capgemini.librarymanagement.validation.LibraryManagementValidation;
+
+public class LibraryMainPage {
+	@SuppressWarnings("resource")
+	public static void main(String[] args) {
+		
+
+		System.out.println("LIBRARY MANAGEMENT SYSTEM");
+		System.out.println("---------------------------");
+	
+		
+		System.out.println("<----login---->");
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter UserName \n");
+		String userName = scanner.next();
+		System.out.println("Enter Password \n");
+		String password = scanner.next();
+
+		
+
+	}
+
+}

@@ -1,0 +1,106 @@
+package com.capgemini.librarymanagement.dao;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Scanner;
+import java.util.Set;
+
+import com.capgemini.librarymanagement.bean.BookInfo;
+import com.capgemini.librarymanagement.bean.BookInfoTransaction;
+import com.capgemini.librarymanagement.db.DbStore;
+
+public class BookInfoTransactionDaoImpl implements BookInfoTransactionDao{
+
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public boolean replaceBook(int repId) {
+		boolean isUpdate = false;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter input to modify Book details");
+		System.out.println("1.Issue date\n2.Return date\n3.fine");
+		int ch1 = sc.nextInt();
+
+		if(ch1==1) {
+			System.out.println("Enter Issue Date ");
+			String bookName = sc.next();
+			BookInfoTransaction bookInfoTransaction=new BookInfoTransaction();
+			bookInfoTransaction.setBookIssueDate(bookInfoTransaction.getBookIssueDate());
+		
+			
+			if(DbStore.bDb.containsKey(repId)) {
+				Set<Integer> keys = DbStore.bDb.keySet();
+				Iterator<Integer> it = keys.iterator();
+				while (it.hasNext()) {
+					Integer integer = it.next();
+					if (repId==integer) {
+						LinkedList res =DbStore.bDb.get(repId);
+						for (int i = 0; i < res.size(); i++) {
+							if(i==0) {
+								res.set(i,bookInfoTransaction.getBookIssueDate());
+								isUpdate = true;
+							}
+						}
+						System.out.println(res);
+					}
+
+				}
+			}
+		}
+		else if(ch1==2) {
+			System.out.println("Enter Return date ");
+			String authName = sc.next();
+
+			BookInfoTransaction bookInfoTransaction=new BookInfoTransaction();
+			bookInfoTransaction.setBookReturnDate(bookInfoTransaction.getBookReturnDate());
+			
+			if(DbStore.bDb.containsKey(repId)) {
+				Set<Integer> keys = DbStore.bDb.keySet();
+				Iterator<Integer> it = keys.iterator();
+				while (it.hasNext()) {
+					Integer integer = it.next();
+					if (repId==integer) {
+						LinkedList res =DbStore.bDb.get(repId);
+						for (int i = 0; i < res.size(); i++) {
+							if(i==1) {
+								res.set(i,bookInfoTransaction.getBookReturnDate());
+								isUpdate = true;
+							}
+						}
+						System.out.println(res);
+					}
+
+				}
+			}
+		}
+		else if(ch1==3) {
+			System.out.println("Enter Fine ");
+			Double fine = sc.nextDouble();
+
+			BookInfoTransaction bookInfoTransaction=new BookInfoTransaction();
+			bookInfoTransaction.setFine(bookInfoTransaction.getFine());
+			
+			if(DbStore.bDb.containsKey(repId)) {
+				Set<Integer> keys = DbStore.bDb.keySet();
+				Iterator<Integer> it = keys.iterator();
+				while (it.hasNext()) {
+					Integer integer = it.next();
+					if (repId==integer) {
+						LinkedList res =DbStore.bDb.get(repId);
+						for (int i = 0; i < res.size(); i++) {
+							if(i==2) {
+								res.set(i,bookInfoTransaction.getFine());
+								isUpdate = true;
+							}
+						}
+						System.out.println(res);
+					}
+				}
+			}
+		}
+		return isUpdate;
+	}
+	
+
+	
+	
+}

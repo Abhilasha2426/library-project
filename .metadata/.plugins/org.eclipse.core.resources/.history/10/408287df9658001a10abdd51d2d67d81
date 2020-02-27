@@ -1,0 +1,6 @@
+package com.capgemini.librarymanagement.service;
+
+public interface UserService {
+	boolean userLogin(String name, String pwd);
+
+}

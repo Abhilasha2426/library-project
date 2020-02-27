@@ -1,0 +1,19 @@
+package com.capgemini.library_management.dao;
+
+import java.util.LinkedList;
+
+import com.capgemini.library_management.beans.BookInfo;
+
+public interface LibraryBookDao {
+
+//	boolean login();
+	@SuppressWarnings("rawtypes")
+	boolean addBook(BookInfo bookInfo, LinkedList li);
+	boolean addUser(int id);
+	boolean deleteBook(int id);
+	boolean replaceBook(int id);
+	boolean deleteUser(int id);
+	
+	
+
+}

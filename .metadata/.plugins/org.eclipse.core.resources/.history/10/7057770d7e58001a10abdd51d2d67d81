@@ -1,0 +1,60 @@
+package com.capgemini.librarymanagement.controller;
+
+import java.util.Scanner;
+
+import com.capgemini.librarymanagement.bean.LibrarianInfoBean;
+import com.capgemini.librarymanagement.dao.LibraryBookDao;
+import com.capgemini.librarymanagement.dao.LibraryBookDaoImpl;
+import com.capgemini.librarymanagement.dao.UserDao;
+import com.capgemini.librarymanagement.dao.UserDaoImpl;
+import com.capgemini.librarymanagement.factory.LibraryManagementBookFactory;
+import com.capgemini.librarymanagement.service.LibraryBookService;
+
+public class LibraryManagementController {
+	
+	static LibraryBookService lbs= LibraryManagementBookFactory.objLibraryService();
+	public static void admin() {
+		LibraryBookDao lbd=new LibraryBookDaoImpl();
+		LibrarianInfoBean lib=new LibrarianInfoBean();
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			System.out.println("ADMIN LOGIN");
+			System.out.println("Enter userName");
+			String name=sc.next();
+			System.out.println("Enter password");
+			String pwd=sc.next();
+			boolean login = lbd.login(name,pwd);
+			if(login==true) {
+				System.out.println("Successfull login");
+			}else {
+				System.err.println("Username or Password incorrect");
+			}
+			break;
+		}
+	}
+	
+	public static void user() {
+		UserDao ud=new UserDaoImpl();
+		LibrarianInfoBean lib= new LibrarianInfoBean();
+Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			System.out.println("USER LOGIN");
+			System.out.println("Enter userName");
+			String name=sc.next();
+			System.out.println("Enter password");
+			String pwd=sc.next();
+			boolean user=ud.userLogin(name, pwd);
+			if(user==true) {
+				System.out.println("Successfull login");
+			}else {
+				System.err.println("Username or Password incorrect");
+			}
+			break;
+		}
+	}
+	
+	}
+
+
